@@ -1,0 +1,17 @@
+.hero_title {
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-family: "Oswald", sans-serif;
+  border: none;
+  width: 85rem;
+  outline: none;
+  margin: 2rem;
+  color: white;
+  background-color: black;
+}
+
+.keyboard {
+  position: fixed;
+  top: 20rem;
+  left: 30rem;
+}

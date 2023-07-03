@@ -1,0 +1,30 @@
+.navbar {
+  justify-content: space-between;
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 2rem;
+  background-color: black;
+}
+
+.logo {
+  padding: 0.2rem;
+  margin-left: 2rem;
+  white-space: pre;
+  color:white;
+}
+
+.navbar_links {
+  display: flex;
+  place-items: center;
+  justify-content: space-between;
+  width: 40rem;
+  margin-right: 3.5rem;
+  list-style-type: none;
+}
+
+.navbar_links a{
+    color:white;
+    text-decoration: none;
+}
