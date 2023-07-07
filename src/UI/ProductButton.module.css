@@ -1,0 +1,55 @@
+.addToCartButton,
+.buyNowButton {
+  display: flex;
+  place-content: center;
+  width: 6rem;
+  position: relative;
+  overflow: hidden;
+  font-size: 0.65rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 1rem;
+}
+
+.buyNowButton:hover {
+  background-color: #00ba09;
+}
+
+.addToCartButton:hover {
+  background-color: white;
+  color: black;
+}
+
+.itemAdded:hover {
+  background-color: black;
+  color: white;
+}
+
+.itemAdded::before {
+  content: "ADDED";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+  background-color: #00ba09;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideIn 0.3s linear forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}

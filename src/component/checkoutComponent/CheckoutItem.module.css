@@ -1,0 +1,34 @@
+
+.productContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #414141;
+    padding: 1rem;
+  }
+  
+  .productImage {
+    width: 8rem;
+    height: 5rem;
+  }
+  
+  .productName {
+    width: 40%;
+  }
+  
+  .productQuantity {
+    width: 15%;
+    text-align: center;
+  }
+  
+  .productPrice {
+    width: 15%;
+    text-align: center;
+  }
+  
+  .productImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  

@@ -1,0 +1,47 @@
+.cartEmpty {
+  margin-top: 3rem;
+  display: flex;
+  font-family: "Titillium Web", sans-serif;
+  place-content: center;
+}
+
+.toCheckOutHeader {
+  font-family: "Titillium Web", sans-serif;
+  display: flex;
+  font-size: 0.85rem;
+  justify-content: space-between;
+  background-color: rgb(40, 40, 40);
+  padding: 1.25rem;
+  padding-left: 12rem;
+  padding-right: 12rem;
+}
+
+.checkoutButton {
+  text-transform: uppercase;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+  background-color: #00cf0a;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.leftColumn {
+  font-family: "Titillium Web", sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.rightColumn {
+  font-family: "Titillium Web", sans-serif;
+  padding: 2rem;
+}
+
+.totalAmount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

@@ -1,0 +1,20 @@
+.product_image_list {
+  display: flex;
+  flex-direction: column;
+}
+
+.product_image {
+  width: 6rem;
+  margin: 0 3rem;
+  overflow: hidden;
+}
+
+.product_image img {
+  width: 100%;
+  object-fit: contain;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.product_image:hover{
+    cursor: pointer;
+}

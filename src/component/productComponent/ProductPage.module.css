@@ -1,0 +1,25 @@
+.product_container {
+  display: flex;
+}
+
+.left_column {
+  display: flex;
+  width: 65%;
+  padding: 1.5rem;
+}
+
+.right_column {
+  display: flex;
+  width: 35%;
+  padding: 1.5rem;
+}
+
+.product_main_image {
+  width: 40rem;
+  overflow: hidden;
+}
+
+.product_main_image img {
+  width: 100%;
+  object-fit: contain;
+}

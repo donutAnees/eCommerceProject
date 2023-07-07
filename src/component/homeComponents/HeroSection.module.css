@@ -1,0 +1,36 @@
+.hero_container {
+  display: grid;
+  place-items: center;
+  place-content: center;
+  text-align: center;
+  height: 100vh;
+  margin-bottom:2rem;
+}
+
+.hero_title {
+  color:rgb(215, 215, 215);
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-family: "Oswald", sans-serif;
+  border: none;
+  outline: none;
+  margin-bottom: 3rem;
+}
+
+.titleKey {
+  font-size: 8rem;
+  color: #ffa6db;
+  animation: enlargeKey 800ms ease-in-out;
+}
+
+@keyframes enlargeKey {
+  0% {
+    font-size: 2rem;
+  }
+  50% {
+    font-size: 8rem;
+  }
+  100% {
+    font-size: 8rem;
+  }
+}

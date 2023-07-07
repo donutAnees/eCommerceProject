@@ -1,18 +1,28 @@
 .navbar {
+  position: sticky;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%, -50%);
   justify-content: space-between;
-  font-family: "Oswald", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   display: flex;
   padding: 1rem;
   margin: 1rem;
   border-radius: 2rem;
-  background-color: black;
+  z-index: 10;
+  transition: 0.8s all;
+}
+
+.active {
+  background-color: rgba(35, 35, 35, 0.9);
 }
 
 .logo {
-  padding: 0.2rem;
+  text-decoration: none;
+  color: white;
+  padding-right: 2rem;
   margin-left: 2rem;
   white-space: pre;
-  color:white;
 }
 
 .navbar_links {
@@ -24,7 +34,26 @@
   list-style-type: none;
 }
 
-.navbar_links a{
-    color:white;
-    text-decoration: none;
+.navbar_links a {
+  color: white;
+  text-decoration: none;
+}
+
+.cart{
+  position: relative;
+}
+
+.cartItemCount {
+  position: absolute;
+  font-size: 0.65rem;
+  left: 60%;
+  top: -50%;
+  background-color: #00cf0a;
+  padding: 0.15rem;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
