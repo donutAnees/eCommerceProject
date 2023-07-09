@@ -28,7 +28,12 @@ const cartSlice = createSlice({
       const index = state.items.findIndex(
         (item) => item.id === action.payload.id
       );
-      console.log(index);
+     if(state.items[index].count === 1){
+      state.items.splice(index,1);
+     }
+     else{
+      state.items[index].count--;
+     }
     },
 
     deleteCart: () => {

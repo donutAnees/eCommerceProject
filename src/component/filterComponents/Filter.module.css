@@ -1,0 +1,47 @@
+.filterContainer {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 1rem;
+  padding: 1rem;
+  width: 18rem;
+}
+
+.options {
+  border: 1px solid #414141;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.optionGroup {
+  margin-bottom: 0.5rem;
+}
+
+.optionHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.optionHeader h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.optionHeader button {
+  background-color: transparent;
+  border: none;
+  color: #00cf0a;
+  font-size: 0.8rem;
+}
+
+.optionHeader button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.options {
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

@@ -11,7 +11,7 @@ export default function MainNavigation() {
 
   useEffect(() => {
     const changeNav = () => {
-      if (window.scrollY >= 70) {
+      if (window.scrollY >= 20) {
         setNavbarStyle(true);
       } else {
         setNavbarStyle(false);

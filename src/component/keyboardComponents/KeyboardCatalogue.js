@@ -1,12 +1,16 @@
 import { Link, json, useLoaderData } from "react-router-dom";
 import styles from "./KeyboardCatalogue.module.css";
 import ProductButton from "../../UI/ProductButton";
+import Filter from "../../component/filterComponents/Filter";
+import useFilter from "../../hooks/useFilter";
 
 export default function KeyboardCatalogue() {
-  const catalogue = useLoaderData();
+  const data = useLoaderData();
+  const {catalogue , applyCondition , clearCondition } = useFilter( data );
 
   return (
     <div className={styles.container}>
+      <Filter applyCondition={applyCondition} clearCondition={clearCondition}></Filter>
       <ul className={styles.productGridContainer}>
         {catalogue.map((product) => {
           return (
@@ -22,7 +26,7 @@ export default function KeyboardCatalogue() {
                 </div>
               </Link>
               <div className={styles.buttonsContainer}>
-                <ProductButton id={product.id} className/>
+                <ProductButton id={product.id} className />
               </div>
             </li>
           );

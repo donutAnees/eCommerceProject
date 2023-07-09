@@ -1,0 +1,30 @@
+.modelOptionContainer {
+    margin: 0.15rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modelButton {
+    text-transform: capitalize;
+    padding: 0.15rem;
+    text-align: left;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 0.875rem;
+  }
+  
+  .active {
+    color: #00cf0a;
+  }
+  
+  .modelButton:hover {
+    padding-left: 0.5rem;
+    cursor: pointer;
+    color: #00cf0a;
+  }
+  
