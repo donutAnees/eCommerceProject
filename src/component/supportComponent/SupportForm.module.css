@@ -1,0 +1,86 @@
+.formContainer {
+  max-width: 30rem;
+  font-family: "Titillium Web", sans-serif;
+  margin: auto;
+  padding: 1.25rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.nameInput {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.625rem;
+}
+
+.firstName,
+.lastName {
+  width: 46%;
+}
+
+.emailInput,
+.category,
+.concern {
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 0.15rem;
+  display: block;
+}
+
+.input,
+.select {
+  font-family: "Titillium Web", sans-serif;
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid #ccc;
+  background-color: #383838;
+  color: white;
+  transition: border-color 0.3s ease;
+}
+
+.select {
+  background-color: rgb(175, 175, 175);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.textarea {
+  width: 100%;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  color: white;
+  border: 0.0625rem solid #ccc;
+  background-color: #383838;
+  padding: 0.75rem;
+  height: 10rem;
+}
+
+.textarea {
+  font-family: "Titillium Web", sans-serif;
+  resize: vertical;
+}
+
+.submitButton {
+  text-transform: uppercase;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 800;
+  font-size: 0.875rem;
+  background-color: #00cf0a;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #00a80a;
+}
+
+.error {
+  color: red;
+  font-size: 0.75rem;
+  margin-top: 0.35rem;
+}

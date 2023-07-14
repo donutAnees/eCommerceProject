@@ -1,14 +1,19 @@
 .filterContainer {
   font-family: "Montserrat", sans-serif;
-  margin-top: 1rem;
-  padding: 1rem;
+  margin-top: 1.75rem;
   width: 18rem;
+  background-color: #222;
+  color: #fff;
+  padding: 1.5rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
 }
 
 .options {
-  border: 1px solid #414141;
-  border-radius: 4px;
-  padding: 1rem;
+  position: sticky;
+  top: 10%;
+  border: none;
+  padding: 0;
 }
 
 .optionGroup {
@@ -25,16 +30,17 @@
   margin: 0;
   font-size: 1rem;
   font-weight: 400;
+  color: #f9c62d;
 }
 
-.optionHeader button {
+.button {
   background-color: transparent;
   border: none;
-  color: #00cf0a;
+  color: #f9c62d;
   font-size: 0.8rem;
 }
 
-.optionHeader button:hover {
+.button:hover {
   cursor: pointer;
   text-decoration: underline;
 }
@@ -44,4 +50,5 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  color: #ccc;
 }

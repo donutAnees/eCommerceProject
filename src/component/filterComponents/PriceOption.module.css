@@ -18,11 +18,11 @@
 }
 
 .active {
-  color: #00cf0a;
+  color: #f9c62d;
 }
 
 .priceButton:hover {
   padding-left: 0.5rem;
   cursor: pointer;
-  color: #00cf0a;
+  color: #f9c62d;
 }

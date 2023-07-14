@@ -1,17 +1,50 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function useFilter(data) {
-  const [catalogue, setCatalogue] = useState(data);
+  const [conditionItem, setConditionItem] = useState(data);
+  const [categoryItem, setCategoryItem] = useState([]);
+  const [filteredItems, setFilteredItems] = useState(data);
+
   const applyCondition = (condition) => {
-    const tempData = catalogue.filter((product) => {
-      return condition(product);
-    });
-    setCatalogue(tempData);
+    const tempData = data.filter((item) => condition(item));
+    setConditionItem(tempData);
   };
+
+  const addItems = (condition) => {
+    setCategoryItem((prev) => [...prev, condition]);
+  };
+
+  useEffect(() => {
+    if (categoryItem.length !== 0) {
+      const tempData = conditionItem.filter((item) =>
+        categoryItem.includes(item.model)
+      );
+      setFilteredItems(tempData);
+    } else {
+      setFilteredItems(conditionItem);
+    }
+  }, [setFilteredItems, categoryItem, conditionItem]);
 
   const clearCondition = () => {
-    setCatalogue(data);
+    setConditionItem(data);
   };
 
-  return { catalogue, applyCondition, clearCondition };
+  const clearCategory = () => {
+    setCategoryItem([]);
+    setConditionItem(data);
+  };
+
+  const removeCategory = (model) => {
+    const tempData = categoryItem.filter((item) => item !== model);
+    setCategoryItem(tempData);
+  };
+
+  return {
+    filteredItems,
+    applyCondition,
+    addItems,
+    clearCondition,
+    clearCategory,
+    removeCategory,
+  };
 }

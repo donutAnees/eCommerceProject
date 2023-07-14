@@ -11,7 +11,16 @@ body{
   color:white;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #00cf0a;
+  box-shadow: 0 0 0.3125rem rgba(0, 207, 10, 0.5);
+}
+
 .material-symbols-outlined {
+  cursor: pointer;
   font-variation-settings:
   'FILL' 0,
   'wght' 400,

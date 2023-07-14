@@ -1,18 +1,18 @@
 .keyboardBanner {
-  max-width: 1200px;
   position: relative;
-  height: 20rem;
-  margin: auto;
+  width: 100vw;
+  height: 30rem;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .keyboardBanner h1 {
-  font-size: 3rem;
+  font-size: 8rem;
   position: absolute;
-  padding-left: 10%;
-  top: 70%;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%);
+  text-shadow: 1px 0 rgb(255, 98, 0);
   font-family: "Anton", sans-serif;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
   transition: transform 0.3s ease;

@@ -25,6 +25,7 @@ const cartSlice = createSlice({
     },
     
     removeFromCart: (state, action) => {
+      state.totalCount -= action.payload.count;
       const index = state.items.findIndex(
         (item) => item.id === action.payload.id
       );
@@ -45,6 +46,7 @@ const cartSlice = createSlice({
         (item) => item.id === action.payload
       );
       if (index === -1) {
+        state.totalCount += 1;
         state.items.push({
           id: action.payload,
           count: 1,

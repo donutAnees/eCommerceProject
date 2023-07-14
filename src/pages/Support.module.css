@@ -1,0 +1,10 @@
+.success {
+  font-family: "Titillium Web", sans-serif;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00cf0a;
+  font-weight: bold;
+  margin-top: 0.25rem;
+}

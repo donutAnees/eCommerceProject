@@ -6,13 +6,26 @@ import useFilter from "../../hooks/useFilter";
 
 export default function KeyboardCatalogue() {
   const data = useLoaderData();
-  const {catalogue , applyCondition , clearCondition } = useFilter( data );
+  const {
+    filteredItems,
+    addItems,
+    applyCondition,
+    clearCondition,
+    clearCategory,
+    removeCategory,
+  } = useFilter(data);
 
   return (
     <div className={styles.container}>
-      <Filter applyCondition={applyCondition} clearCondition={clearCondition}></Filter>
+      <Filter
+        addItems={addItems}
+        applyCondition={applyCondition}
+        clearCondition={clearCondition}
+        clearCategory={clearCategory}
+        removeCategory={removeCategory}
+      ></Filter>
       <ul className={styles.productGridContainer}>
-        {catalogue.map((product) => {
+        {filteredItems.map((product) => {
           return (
             <li className={styles.productGrid} key={product.id}>
               <Link to={`/keyboards/${product.id}`} className={styles.link}>

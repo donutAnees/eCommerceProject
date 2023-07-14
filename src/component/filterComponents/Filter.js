@@ -19,6 +19,7 @@ export default function Filter(props) {
   ];
 
   const [selectedOption, setSelectedOption] = useState(null);
+  const [clearModelOption, setClearModelOption] = useState(false);
 
   return (
     <div className={styles.filterContainer}>
@@ -27,6 +28,7 @@ export default function Filter(props) {
           <div className={styles.optionHeader}>
             <h3>Price</h3>
             <button
+              className={styles.button}
               onClick={() => {
                 props.clearCondition();
                 setSelectedOption(null);
@@ -52,15 +54,24 @@ export default function Filter(props) {
         <div className={styles.optionGroup}>
           <div className={styles.optionHeader}>
             <h3>Model</h3>
-            <button onClick={props.clearCondition}>Clear</button>
+            <button
+              onClick={() => {
+                props.clearCategory();
+                setClearModelOption(true);
+              }}
+              className={styles.button}
+            >
+              Clear
+            </button>
           </div>
           {models.map((model) => (
             <ModelOption
               key={model.id}
-              id={model.id}
               model={model.model}
-              applyCondition={props.applyCondition}
-              clearCondition={props.clearCondition}
+              addItems={props.addItems}
+              removeCategory={props.removeCategory}
+              clearModelOption={clearModelOption}
+              setClearModelOption={setClearModelOption}
             />
           ))}
         </div>

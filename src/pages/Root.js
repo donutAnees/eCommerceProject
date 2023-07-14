@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import MainNavigation from "../UI/MainNavigation";
 
 export default function Root(){
@@ -6,6 +6,7 @@ export default function Root(){
         <>
         <MainNavigation></MainNavigation>
         <Outlet></Outlet>
+        <ScrollRestoration/>
         </>
     )
 }

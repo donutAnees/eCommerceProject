@@ -1,0 +1,14 @@
+.container {
+  margin-top: 2rem;
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.message {
+  font-size: 1.2rem;
+}

@@ -2,9 +2,9 @@ import styles from "./KeyboardBanner.module.css";
 export default function KeyboardBanner() {
   return (
     <div className={styles.keyboardBanner}>
-       <h1>CHOOSE WHAT YOU LOVE</h1>
+      <h1>KEYBOARDS</h1>
       <img
-        src="https://assets3.razerzone.com/36QDEx4Y4bTl5h3VvfIfVTggVrA=/1500x1000/https%3A%2F%2Fhybrismediaprod.blob.core.windows.net%2Fsys-master-phoenix-images-container%2Fhef%2Fh90%2F9089910931486%2Frazer-blackwidow-v3-1500x1000_2.jpg"
+        src="https://cdn.vox-cdn.com/thumbor/PO7begyp5EdFFK8BSjlYAfCMNd0=/0x0:3000x2000/3000x2000/filters:focal(1500x1000:1501x1001)/cdn.vox-cdn.com/uploads/chorus_asset/file/23610295/VRG_ILLO_5272_Mech_Keyboard_Buying_Guide.jpg"
         alt=""
       />
     </div>

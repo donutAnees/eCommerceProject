@@ -15,11 +15,14 @@
 }
 
 .product_main_image {
+  display: flex;
+  place-content: center;
   width: 40rem;
+  height: 30rem;
   overflow: hidden;
 }
 
 .product_main_image img {
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }

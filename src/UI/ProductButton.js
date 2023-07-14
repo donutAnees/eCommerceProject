@@ -21,8 +21,10 @@ export default function ProductButton(props) {
 
   const addToCartAnimation = () => {
     setAddToCartClicked(true);
-    setTimeout(() => {setAddToCartClicked(false);} , 1000);
-  }
+    setTimeout(() => {
+      setAddToCartClicked(false);
+    }, 500);
+  };
 
   return (
     <>
@@ -34,10 +36,7 @@ export default function ProductButton(props) {
       >
         ADD TO CART
       </button>
-      <button
-        className={styles.buyNowButton}
-        onClick={() => buyNow(props.id)}
-      >
+      <button className={styles.buyNowButton} onClick={() => buyNow(props.id)}>
         BUY NOW
       </button>
     </>
