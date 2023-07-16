@@ -29,7 +29,7 @@ export default function LatestProducts() {
     <>
       <div className={styles.title}>
         <h1>
-          Our Latest <span class={styles.titleSpan}>Products</span>
+          Our Latest <span className={styles.titleSpan}>Products</span>
         </h1>
       </div>
       <InView

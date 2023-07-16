@@ -1,8 +1,9 @@
 .searchContainer {
-  position: absolute;
   width: 60%;
+  position: absolute;
+  top: 35%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%);
 }
 
 input[type="text"] {
@@ -34,4 +35,11 @@ ul {
 
 .searchedItem:hover {
   background-color: #9c9c9c;
+}
+
+@media screen and (max-width: 600px) {
+  .searchContainer {
+    top: 100%;
+    width: 90%;
+  }
 }

@@ -17,12 +17,40 @@
 .product_main_image {
   display: flex;
   place-content: center;
-  width: 40rem;
-  height: 30rem;
+  width: 60vw;
+  height: 60vh;
   overflow: hidden;
 }
 
 .product_main_image img {
   width: 100%;
   object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+
+  .product_container {
+    flex-direction: column;
+  }
+
+  .left_column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .product_main_image {
+    margin: auto;
+    width: 28rem;
+    height: 20rem;
+    margin-top: 2.5rem;
+  }
+
+  .right_column {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
 }

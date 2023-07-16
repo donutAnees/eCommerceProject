@@ -26,3 +26,10 @@
   cursor: pointer;
   color: #f9c62d;
 }
+
+
+@media screen and (max-width: 600px) {
+  .priceButton:hover {
+    padding: 0.15rem;
+  }
+}

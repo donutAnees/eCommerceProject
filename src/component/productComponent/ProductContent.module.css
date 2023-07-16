@@ -44,3 +44,16 @@
   display: flex;
 }
 
+@media screen and (max-width:900px) {
+  .product_content_container{
+    width: 30rem;
+    background-color: #000000;
+    padding: 0;
+  }
+
+  .product_button_container {
+    display: flex;
+    align-self: center;
+  }
+
+}

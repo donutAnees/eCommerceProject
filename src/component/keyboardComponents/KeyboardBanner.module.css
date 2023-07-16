@@ -1,21 +1,21 @@
 .keyboardBanner {
-  position: relative;
   width: 100vw;
-  height: 30rem;
+  height: 60vh;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .keyboardBanner h1 {
-  font-size: 8rem;
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%);
+  font-size: 10vw;
   text-shadow: 1px 0 rgb(255, 98, 0);
   font-family: "Anton", sans-serif;
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
   transition: transform 0.3s ease;
+  position: absolute;
 }
 
 .keyboardBanner img {
@@ -30,5 +30,11 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width : 600px) {
+  .keyboardBanner {
+    height: 30vh;
   }
 }

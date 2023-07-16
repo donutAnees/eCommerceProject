@@ -70,7 +70,7 @@ export default function ConfirmCheckout() {
         <div className={styles.rightColumn}>
           <div className={styles.totalAmount}>
             <h3>Subtotal</h3>
-            <div>{totalAmount}</div>
+            <div>${totalAmount}</div>
           </div>
         </div>
       </div>

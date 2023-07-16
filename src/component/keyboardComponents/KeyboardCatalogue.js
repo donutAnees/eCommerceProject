@@ -17,13 +17,15 @@ export default function KeyboardCatalogue() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.filter}>
       <Filter
         addItems={addItems}
         applyCondition={applyCondition}
         clearCondition={clearCondition}
         clearCategory={clearCategory}
         removeCategory={removeCategory}
-      ></Filter>
+      />
+      </div>
       <ul className={styles.productGridContainer}>
         {filteredItems.map((product) => {
           return (

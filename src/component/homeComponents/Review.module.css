@@ -6,17 +6,18 @@
 
 .reviewContainer {
   display: flex;
-  height: 32rem;
-  justify-content: center;
+  flex-direction: row;
 }
 
 .review {
-  padding: 4rem;
-  width: 50%;
-  animation: fadeIn 1s ease-in-out;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  background-color: #fff;
+  padding: 2rem;
+  width: 60%;
+}
+
+.review p {
+  color: rgb(66, 66, 66);
+  font-weight: 100;
+  font-size: 2.5vw;
 }
 
 .quotes {
@@ -28,14 +29,8 @@
   object-fit: contain;
 }
 
-.review p {
-  color: rgb(66, 66, 66);
-  font-weight: 100;
-  font-size: 1.5rem;
-}
-
 .author {
-  width: 60%;
+  width: 40%;
   overflow: hidden;
 }
 
@@ -44,10 +39,3 @@
   height: 100%;
   object-fit: cover;
 }
-
-.author h6 {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  text-align: right;
-}
-

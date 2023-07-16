@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className={styles.buttonContainer}>
         <Link to={"/keyboards"}>
         <button className={styles.exploreButton}>
-          Explore <span class="material-symbols-outlined">arrow_forward</span>
+          Explore <span className="material-symbols-outlined">arrow_forward</span>
         </button>
         </Link>
       </div>

@@ -1,53 +1,105 @@
-.productContainer {
+.checkoutItem {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+}
+
+.productContainer {
   border-bottom: 1px solid #414141;
+  display: flex;
   padding: 1rem;
 }
 
 .productImage {
-  width: 8rem;
-  height: 5rem;
-}
-
-.productName {
-  width: 40%;
-  text-decoration: none;
-  color: white;
-}
-
-.productName:hover {
-  color: #00cf0a;
-}
-
-.productQuantity {
-  display: flex;
-  place-items: center;
-  width: 15%;
-  text-align: center;
-}
-
-.productQuantityBtn {
-  color: white;
-  font-size: x-large;
-  background-color: transparent;
-  border: none;
-  margin: 1rem;
-}
-
-.productQuantityBtn:hover {
-  cursor: pointer;
-  color: #00cf0a;
-}
-
-.productPrice {
-  width: 15%;
-  text-align: center;
+  width: 50%;
+  height: 10rem;
 }
 
 .productImage img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  border-radius: 0.75rem;
+  object-fit: cover;
+}
+
+.productInfo {
+  padding: 1rem;
+  width: 50%;
+}
+
+.productName {
+  text-decoration: none;
+  color: white;
+}
+
+.productPrice {
+  color: #00ff0d;
+  padding: 1rem;
+}
+
+.productQuantity {
+  width: 10rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.productQuantityBtn {
+    color: white;
+  display: grid;
+  align-items: center;
+  padding: 0.25rem 1rem 0.25rem 1rem;
+  background-color: #00cf0a;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.productQuantityBtn:hover {
+  cursor: pointer;
+  background-color: #00ba09;
+}
+
+@media screen and (min-width: 601px) {
+  .checkoutItem {
+    flex-direction: column;
+  }
+
+  .productContainer {
+    padding: 1.5rem;
+  }
+
+  .productImage {
+    height: 18rem;
+  }
+
+  .productName:hover {
+    color: #00cf0a;
+  }
+
+  .productInfo {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    margin-left: 5rem;
+  }
+
+  .productQuantity {
+    width: 12rem;
+  }
+
+  .productPrice {
+    padding: 0;
+    padding-top: 1rem;
+  }
+
+  .productQuantity {
+    margin: 0;
+    padding-top: 1rem;
+  }
+
+  .productQuantityBtn {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
 }

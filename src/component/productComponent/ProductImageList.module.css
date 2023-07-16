@@ -11,10 +11,23 @@
 
 .product_image img {
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
 }
 
-.product_image:hover{
-    cursor: pointer;
+.product_image:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+
+  .product_image_list {
+    flex-direction: row;
+  }
+
+  .product_image {
+    width: 100%;
+    margin: 0 0.25rem;
+  }
+
 }

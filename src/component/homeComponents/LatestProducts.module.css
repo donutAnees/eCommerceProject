@@ -1,8 +1,7 @@
 .title {
-  font-family: 'Inter', sans-serif;
-  display: grid;
-  place-content: center;
-  font-size: 2rem;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-size: 1rem;
   color: rgb(243, 220, 255);
 }
 
@@ -15,15 +14,17 @@
 }
 
 .latest-product-container {
+  position: relative;
   border-radius: 0.5rem;
   opacity: 0;
   transition: 3s all;
   font-family: "Titillium Web", sans-serif;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1.5rem;
+  padding: 1.5rem;
+  overflow-x: auto;
 }
 
 .show {
@@ -85,4 +86,23 @@
   background-color: aquamarine;
   color: black;
   border-radius: 1.5rem;
+}
+
+@media screen and (min-width: 769px) {
+  .title {
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+  }
+
+  .latest-product-container {
+    flex-direction: row;
+  }
+
+  .show {
+    opacity: 1;
+  }
+
+  .productGrid {
+    flex-direction: column;
+  }
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Filter.module.css";
 import PriceOption from "./PriceOption";
 import ModelOption from "./ModelOption";
@@ -20,6 +20,25 @@ export default function Filter(props) {
 
   const [selectedOption, setSelectedOption] = useState(null);
   const [clearModelOption, setClearModelOption] = useState(false);
+  const [isPriceClicked, setIsPriceClicked] = useState(false);
+  const [isModelClicked, setIsModelClicked] = useState(false);
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  console.log(screenWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className={styles.filterContainer}>
@@ -27,6 +46,16 @@ export default function Filter(props) {
         <div className={styles.optionGroup}>
           <div className={styles.optionHeader}>
             <h3>Price</h3>
+            <button
+              className={styles.mobileFilter}
+              onClick={() => setIsPriceClicked((prev) => !prev)}
+            >
+              {isPriceClicked ? (
+                <span className="material-symbols-outlined">expand_less</span>
+              ) : (
+                <span class="material-symbols-outlined">expand_more</span>
+              )}
+            </button>
             <button
               className={styles.button}
               onClick={() => {
@@ -37,23 +66,37 @@ export default function Filter(props) {
               Clear
             </button>
           </div>
-          {prices.map((price) => (
-            <PriceOption
-              key={price.id}
-              id={price.id}
-              min={price.min}
-              max={price.max}
-              text={price.text}
-              applyCondition={props.applyCondition}
-              clearCondition={props.clearCondition}
-              selectedOption={selectedOption}
-              setSelectedOption={setSelectedOption}
-            />
-          ))}
+          <div className={isPriceClicked ? styles.filters : null}>
+            {isPriceClicked || screenWidth > 600
+              ? prices.map((price) => (
+                  <PriceOption
+                    key={price.id}
+                    id={price.id}
+                    min={price.min}
+                    max={price.max}
+                    text={price.text}
+                    applyCondition={props.applyCondition}
+                    clearCondition={props.clearCondition}
+                    selectedOption={selectedOption}
+                    setSelectedOption={setSelectedOption}
+                  />
+                ))
+              : null}
+          </div>
         </div>
         <div className={styles.optionGroup}>
           <div className={styles.optionHeader}>
             <h3>Model</h3>
+            <button
+              className={styles.mobileFilter}
+              onClick={() => setIsModelClicked((prev) => !prev)}
+            >
+              {isModelClicked ? (
+                <span className="material-symbols-outlined">expand_less</span>
+              ) : (
+                <span class="material-symbols-outlined">expand_more</span>
+              )}
+            </button>
             <button
               onClick={() => {
                 props.clearCategory();
@@ -64,16 +107,20 @@ export default function Filter(props) {
               Clear
             </button>
           </div>
-          {models.map((model) => (
-            <ModelOption
-              key={model.id}
-              model={model.model}
-              addItems={props.addItems}
-              removeCategory={props.removeCategory}
-              clearModelOption={clearModelOption}
-              setClearModelOption={setClearModelOption}
-            />
-          ))}
+          <div className={isModelClicked ? styles.filters : null}>
+            {isModelClicked || screenWidth > 600
+              ? models.map((model) => (
+                  <ModelOption
+                    key={model.id}
+                    model={model.model}
+                    addItems={props.addItems}
+                    removeCategory={props.removeCategory}
+                    clearModelOption={clearModelOption}
+                    setClearModelOption={setClearModelOption}
+                  />
+                ))
+              : null}
+          </div>
         </div>
       </div>
     </div>
